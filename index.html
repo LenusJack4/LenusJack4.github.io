@@ -1,8 +1,88 @@
 <!DOCTYPE html>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+<script type = "text/javascript">
+    var gameOpen = [false, false, false, false];
+
+    // SER [0]
+    $(function() {
+    $('#serButton').click(function(){
+        if(gameOpen[0] == true){
+            $('#serIframe').html('');
+            $('#serButton').html('Play SER');
+            gameOpen[0] = false;
+        }
+        else if(!$('#iframe').length) {
+            $('#serIframe').html('<iframe src="https://i.simmer.io/@Ljack4/ser?skin=smg" style="width:960px;height:600px;border:0"></iframe>');
+            $('#serButton').html('Close SER');
+            gameOpen[0] = true;
+        }
+    });
+});
+    
+    // RACECAR GAME [1]
+    $(function() {
+    $('#raceButton').click(function(){
+        if(gameOpen[1] == true){
+            $('#raceIframe').html('');
+            $('#raceButton').html('Play Racecar Game');
+            gameOpen[1] = false;
+        }
+        else if(!$('#iframe').length) {
+            $('#raceIframe').html('<iframe src="https://i.simmer.io/@Ljack4/block-breaker-tuned?skin=smg" style="width:960px;height:600px;border:0"></iframe>');
+            $('#raceButton').html('Close Racecar Game');
+            gameOpen[1] = true;
+        }
+    });
+});
+    
+    // GALAXY SHOOTER [2]
+    $(function() {
+    $('#spaceButton').click(function(){
+        if(gameOpen[2] == true){
+            $('#spaceIframe').html('');
+            $('#spaceButton').html('Play Galaxy Shooter');
+            gameOpen[2] = false;
+        }
+        else if(!$('#iframe').length) {
+            $('#spaceIframe').html('<iframe src="https://i.simmer.io/@Ljack4/block-breaker-tuned?skin=smg" style="width:960px;height:600px;border:0"></iframe>');
+            $('#spaceButton').html('Close Galaxy Shooter');
+            gameOpen[2] = true;
+        }
+    });
+});
+    
+    // BLOCK BREAKER [3]
+    $(function() {
+    $('#bbButton').click(function(){
+        if(gameOpen[3] == true){
+            $('#bbIframe').html('');
+            $('#bbButton').html('Play Block Breaker');
+            gameOpen[3] = false;
+        }
+        else if(!$('#iframe').length) {
+            $('#bbIframe').html('<iframe src="https://i.simmer.io/@Ljack4/block-breaker-tuned?skin=smg" style="width:960px;height:600px;border:0"></iframe>');
+            $('#bbButton').html('Close Block Breaker');
+            gameOpen[3] = true;
+        }
+    });
+});
+</script>
+
 <html>
 <body>
 <h1>Hello World</h1>
 <p>I'm hosted with Github Pages.</p>
-    <iframe src="https://i.simmer.io/@Ljack4/ser?skin=smg" style="width:960px;height:600px;border:0"></iframe>
+    <button id='serButton'>Play SER</button>
+    <div id='serIframe'></div>
+    
+    <button id='raceButton'>Play Racecar Game</button>
+    <div id='raceIframe'></div>
+    
+    <button id='spaceButton'>Play Galaxy Shooter</button>
+    <div id='spaceIframe'></div>
+    
+    <button id='bbButton'>Play Block Breaker</button>
+    <div id='bbIframe'></div>
 </body>
 </html>
