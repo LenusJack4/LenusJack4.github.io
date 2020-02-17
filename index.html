@@ -29,7 +29,7 @@
             gameOpen[1] = false;
         }
         else if(!$('#iframe').length) {
-            $('#raceIframe').html('<iframe src="https://i.simmer.io/@Ljack4/block-breaker-tuned?skin=smg" style="width:960px;height:600px;border:0"></iframe>');
+            $('#raceIframe').html('<iframe src="https://i.simmer.io/@Ljack4/racecar-game?skin=smg" style="width:960px;height:600px;border:0"></iframe>');
             $('#raceButton').html('Close Racecar Game');
             gameOpen[1] = true;
         }
@@ -72,6 +72,7 @@
 <html>
 <body>
 <h1>Welcome!</h1>
+    <p>Under Construction..</p>
 
     <h3>About Me</h3>
     <p>Thank you for taking the time to view my portfolio.</p>
@@ -81,15 +82,15 @@
     <button id='serButton'>Play SER</button>
     <div id='serIframe'></div>
     
-    <h3>Super Creative Racecar Game</h3>
-    <p>This is the first game that I made entirely by myself and from scratch. This game is a 2D endless runner that procedurally generates as the player continues. As long as the player does not run out of health, they can play forever and keep increasing their score by collecting coins.</p>
-    <button id='raceButton'>Play Racecar Game</button>
-    <div id='raceIframe'></div>
-    
     <h3>Galaxy Defender</h3>
     <p>This game is based off of the classic space shooter games. The player must navigate the ship through enemy fire and shoot enemy ships to rack up score. I made this game with the help of a few tutorials to nail the core gameplay loop as I familiarized myself with Unity programming, but implemented certain features on my own without help, such as the collectibles and the win condition. The real fun starts after gaining a score of 20,000.</p>
     <button id='spaceButton'>Play Galaxy Shooter</button>
     <div id='spaceIframe'></div>
+    
+    <h3>Super Creative Racecar Game</h3>
+    <p>This is the first game that I made entirely by myself and from scratch. This game is a 2D endless runner that procedurally generates as the player continues. As long as the player does not run out of health, they can play forever and keep increasing their score by collecting coins.</p>
+    <button id='raceButton'>Play Racecar Game</button>
+    <div id='raceIframe'></div>
     
     <h3>Block Breaker</h3>
     <p>This is the first game I ever completed. It is a simple game where the player must control a paddle to bounce a ball into blocks to break them, based off of the classic Atari Breakout. It was made with the assistance of tutorials, but I did not like the way the paddle felt to control so I was able to adjust the code to tune the game and paddle behavior to make it feel better more responsive and forgiving to players with slower reflexes without slowing down the game speed itself.</p>
