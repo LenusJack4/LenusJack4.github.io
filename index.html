@@ -2,68 +2,84 @@
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
 <script type = "text/javascript">
-    var gameOpen = [false, false, false, false];
+    var gameOpen = [false, false, false, false, false];
 
-    // SER [0]
+    // Lost Soul [0]
+    $(function () {
+        $('#soulButton').click(function () {
+            if (gameOpen[0] == true) {
+                $('#soulIframe').html('');
+                $('#soulButton').html('Play Lost Soul');
+                gameOpen[0] = false;
+            }
+            else if (!$('#iframe').length) {
+                $('#soulIframe').html('<iframe src="https://i.simmer.io/@Ljack4/lost-soul" style="width:960px;height:600px"></iframe>');
+                $('#soulButton').html('Close Lost Soul');
+                gameOpen[0] = true;
+            }
+        });
+    });
+
+    // SER [1]
     $(function() {
     $('#serButton').click(function(){
-        if(gameOpen[0] == true){
+        if(gameOpen[1] == true){
             $('#serIframe').html('');
             $('#serButton').html('Play SER');
-            gameOpen[0] = false;
+            gameOpen[1] = false;
         }
         else if(!$('#iframe').length) {
             $('#serIframe').html('<iframe src="https://i.simmer.io/@Ljack4/ser?skin=smg" style="width:960px;height:600px;border:0"></iframe>');
             $('#serButton').html('Close SER');
-            gameOpen[0] = true;
-        }
-    });
-});
-    
-    // RACECAR GAME [1]
-    $(function() {
-    $('#raceButton').click(function(){
-        if(gameOpen[1] == true){
-            $('#raceIframe').html('');
-            $('#raceButton').html('Play Racecar Game');
-            gameOpen[1] = false;
-        }
-        else if(!$('#iframe').length) {
-            $('#raceIframe').html('<iframe src="https://i.simmer.io/@Ljack4/racecar-game?skin=smg" style="width:960px;height:600px;border:0"></iframe>');
-            $('#raceButton').html('Close Racecar Game');
             gameOpen[1] = true;
         }
     });
 });
     
-    // GALAXY SHOOTER [2]
+    // RACECAR GAME [2]
     $(function() {
-    $('#spaceButton').click(function(){
+    $('#raceButton').click(function(){
         if(gameOpen[2] == true){
-            $('#spaceIframe').html('');
-            $('#spaceButton').html('Play Galaxy Shooter');
+            $('#raceIframe').html('');
+            $('#raceButton').html('Play Racecar Game');
             gameOpen[2] = false;
         }
         else if(!$('#iframe').length) {
-            $('#spaceIframe').html('<iframe src="https://i.simmer.io/@Ljack4/galaxy-defender-patched?skin=smg" style="width:405px;height:720px;border:0"></iframe>');
-            $('#spaceButton').html('Close Galaxy Shooter');
+            $('#raceIframe').html('<iframe src="https://i.simmer.io/@Ljack4/racecar-game?skin=smg" style="width:960px;height:600px;border:0"></iframe>');
+            $('#raceButton').html('Close Racecar Game');
             gameOpen[2] = true;
         }
     });
 });
     
-    // BLOCK BREAKER [3]
+    // GALAXY SHOOTER [3]
+    $(function() {
+    $('#spaceButton').click(function(){
+        if(gameOpen[3] == true){
+            $('#spaceIframe').html('');
+            $('#spaceButton').html('Play Galaxy Shooter');
+            gameOpen[3] = false;
+        }
+        else if(!$('#iframe').length) {
+            $('#spaceIframe').html('<iframe src="https://i.simmer.io/@Ljack4/galaxy-defender-patched?skin=smg" style="width:405px;height:720px;border:0"></iframe>');
+            $('#spaceButton').html('Close Galaxy Shooter');
+            gameOpen[3] = true;
+        }
+    });
+});
+    
+    // BLOCK BREAKER [4]
     $(function() {
     $('#bbButton').click(function(){
-        if(gameOpen[3] == true){
+        if(gameOpen[4] == true){
             $('#bbIframe').html('');
             $('#bbButton').html('Play Block Breaker');
-            gameOpen[3] = false;
+            gameOpen[4] = false;
         }
         else if(!$('#iframe').length) {
             $('#bbIframe').html('<iframe src="https://i.simmer.io/@Ljack4/block-breaker-tuned?skin=smg" style="width:960px;height:600px;border:0"></iframe>');
             $('#bbButton').html('Close Block Breaker');
-            gameOpen[3] = true;
+            gameOpen[4] = true;
         }
     });
 });
@@ -71,27 +87,32 @@
 
 <html>
 <body>
-<h1>Welcome!</h1>
+    <h1>Welcome!</h1>
     <p>Under Construction..</p>
 
     <h3>About Me</h3>
     <p>Thank you for taking the time to view my portfolio.</p>
-    
+
+    <h3>Lost Soul</h3>
+    <p>Play as a soul in search of something that he can't quite remember while he slowly loses his light. And find it before the darkness steals it all. Lost Soul was created during the 2021 Global Game Jame where the theme was "lost." Due to the game jam being in a new format this year to adapt to covid precautions, the games were not judged and were made purely for the experience. For this game I scripted a lot of the events, programmed some movement and health interactions, and fully animated the player character and enemy NPCs. </p>
+    <button id='soulButton'>Play SER</button>
+    <div id='soulIframe'></div>
+
     <h3>SER</h3>
     <p>SER is a selfish, egotistical robot who must go on a journey to repair himself both physically and emotionally. SER was created during the 2020 Global Game Jam where the theme was "repair" and SER won the award for "Best Use of Theme" at the LSU site. This is the first game I created with a team, and I was the sole gameplay/movement programmer for the project. The gameplay was built from scratch and without assistance from tutorials. </p>
     <button id='serButton'>Play SER</button>
     <div id='serIframe'></div>
-    
+
     <h3>Galaxy Defender</h3>
     <p>This game is based off of the classic space shooter games. The player must navigate the ship through enemy fire and shoot enemy ships to rack up score. I made this game with the help of a few tutorials to nail the core gameplay loop as I familiarized myself with Unity programming, but implemented certain features on my own without help, such as the collectibles and the win condition. The real fun starts after gaining a score of 20,000.</p>
     <button id='spaceButton'>Play Galaxy Shooter</button>
     <div id='spaceIframe'></div>
-    
+
     <h3>Super Creative Racecar Game</h3>
     <p>This is the first game that I made entirely by myself and from scratch. This game is a 2D endless runner that procedurally generates as the player continues. As long as the player does not run out of health, they can play forever and keep increasing their score by collecting coins.</p>
     <button id='raceButton'>Play Racecar Game</button>
     <div id='raceIframe'></div>
-    
+
     <h3>Block Breaker</h3>
     <p>This is the first game I ever completed. It is a simple game where the player must control a paddle to bounce a ball into blocks to break them, based off of the classic Atari Breakout. It was made with the assistance of tutorials, but I did not like the way the paddle felt to control so I was able to adjust the code to tune the game and paddle behavior to make it feel better more responsive and forgiving to players with slower reflexes without slowing down the game speed itself.</p>
     <button id='bbButton'>Play Block Breaker</button>
